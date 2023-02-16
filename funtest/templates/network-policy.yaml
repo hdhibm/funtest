@@ -1,0 +1,12 @@
+{{- range $.Values.namespacePostfixes }}
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-by-default
+  namespace: testapp123-dev
+spec:
+  podSelector: {}
+  ingress: []
+{{- end }}
+
